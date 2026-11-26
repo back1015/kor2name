@@ -1,6 +1,6 @@
 {
-  "name": "naming-helper",
-  "displayName": "Naming Helper",
+  "name": "kor2name",
+  "displayName": "Kor2Name",
   "description": "한글 설명을 선택하면 Gemini가 영어 변수·메서드 이름 후보를 제안하는 VS Code 익스텐션",
   "version": "0.0.1",
   "private": true,
@@ -16,13 +16,13 @@
   "contributes": {
     "commands": [
       {
-        "command": "namingHelper.suggestName",
-        "title": "Naming Helper: 이름 추천"
+        "command": "kor2name.suggestName",
+        "title": "Kor2Name: 이름 추천"
       }
     ],
     "keybindings": [
       {
-        "command": "namingHelper.suggestName",
+        "command": "kor2name.suggestName",
         "key": "ctrl+alt+n",
         "mac": "cmd+alt+n",
         "when": "editorHasSelection"

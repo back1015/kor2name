@@ -1,4 +1,4 @@
-# Naming Helper
+# Kor2Name
 
 한글 설명을 선택하고 단축키를 누르면 Gemini가 영어 이름 후보 3~5개를 제안하고, 고르면 선택 영역을 바로 바꿔주는 VS Code 익스텐션.
 목표: 영어 네이밍 고민 시간을 없애고 개발에 집중하기. 대상 언어는 JavaScript, TypeScript, Python.

@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext): void {
-  const suggestName = vscode.commands.registerCommand("namingHelper.suggestName", () => {
+  const suggestName = vscode.commands.registerCommand("kor2name.suggestName", () => {
     const editor = vscode.window.activeTextEditor;
     const selection = editor ? editor.document.getText(editor.selection).trim() : "";
     if (selection.length === 0) {
