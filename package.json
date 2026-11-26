@@ -1,0 +1,60 @@
+{
+  "name": "kor2name",
+  "displayName": "Kor2Name",
+  "description": "한글 설명을 선택하면 Gemini가 영어 변수·메서드 이름 후보를 제안하는 VS Code 익스텐션",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "kor2name.suggestName",
+        "title": "Kor2Name: 이름 추천"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "kor2name.suggestName",
+        "key": "ctrl+alt+n",
+        "mac": "cmd+alt+n",
+        "when": "editorHasSelection"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:vscode": "npm run build && tsc -p tsconfig.vscode-test.json && vscode-test",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm run test",
+    "vscode:prepublish": "npm run build -- --production"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.20.7",
+    "@types/vscode": "1.90.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.1.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.15.0",
+    "mocha": "^12.0.3",
+    "prettier": "^3.10.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.74.0",
+    "vitest": "^5.1.2"
+  }
+}
