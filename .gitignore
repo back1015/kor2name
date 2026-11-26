@@ -1,0 +1,8 @@
+node_modules/
+dist/
+out/
+.vscode-test/
+coverage/
+*.vsix
+.env
+.claude/settings.local.json
